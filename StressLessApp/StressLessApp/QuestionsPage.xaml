@@ -67,7 +67,7 @@
                    HorizontalOptions="Center"
                    TextColor="Black"/>
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                <RadioButton
+                <RadioButton x:Name="YesButton"
                     HorizontalOptions="Center"
                     
                 />
@@ -88,6 +88,8 @@
                     TextColor="Black"
                        />
             </StackLayout>
+
+            
 
             <Button x:Name="NextPageButton"
             Clicked="NextPageButton_Clicked"

@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="StressLessApp.SleepPage">
+
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Sleep"
+                   HorizontalOptions="StartAndExpand"
+                   VerticalOptions="CenterAndExpand"
+                   FontSize="25"
+                   FontAttributes="Bold"/>
+            <Image Source="icon.png"
+               VerticalOptions="CenterAndExpand"
+               Margin="3"
+               HorizontalOptions="End" />
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+    <ContentPage.Content>
+        <StackLayout>
+
+            <StackLayout VerticalOptions="CenterAndExpand">
+
+                <Label Text="What's your ideal amount of sleep?"
+                   HorizontalOptions="CenterAndExpand"
+                   FontSize="20"
+                       Padding="10"
+                   TextColor="Black"/>
+            <Label x:Name="hoursOfSleep"
+                    Text="7 hours"
+                    FontSize="36"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    TextColor="Black"/>
+                <Stepper 
+                    x:Name="SleepStepper"
+                    Minimum="7"
+                      Maximum="12"
+                      Increment="1"
+                     Margin="5"
+                      HorizontalOptions="Center"
+                      ValueChanged="Stepper_ValueChanged"
+                     />
+            </StackLayout>
+
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <Image Source="bedtime.png"
+                       Margin ="15"
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="CenterAndExpand" />
+            </StackLayout>
+
+            <StackLayout VerticalOptions="EndAndExpand">
+
+                <Button x:Name="NextPageButton"
+            Clicked="NextPageButton_Clicked"
+            Text="Next"
+            Margin="40"
+            VerticalOptions="EndAndExpand"
+            TextColor="Blue"
+            BackgroundColor="SkyBlue"/>
+
+            </StackLayout>
+
+        </StackLayout>
+
+        
+    </ContentPage.Content>
+</ContentPage>
