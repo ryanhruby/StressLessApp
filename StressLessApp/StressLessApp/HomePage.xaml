@@ -6,7 +6,33 @@
         <Label Text="Welcome to the Home Page!"
                 VerticalOptions="Center"
                 HorizontalOptions="Center"
-               FontSize="20"
+               FontSize="30"
         />
+
+        <Button Text="Your Personalized Calendar To Reduce Stress"
+                HorizontalOptions="CenterAndExpand"
+                Padding="10"
+                Margin="20"
+                Clicked="Button_Clicked"/>
+
+            <Label Text="Study Timer:"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   FontSize="25"/>
+            <Label x:Name="Timer"
+                   Text="00:00:00"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   FontSize="25"/>
+
+         <StackLayout  Orientation="Horizontal">
+            <Button Text="Start Studying!"
+                    Clicked="Start_Timer"/>
+            <Button Text="Pause Studying"
+                    Clicked="Pause_Timer"/>
+            <Button Text="Stop Studying"
+                    Clicked="End_Timer"/>
+         </StackLayout>
+       
     </StackLayout>
 </ContentPage>
