@@ -31,16 +31,23 @@
                     HorizontalOptions="Center"
                     VerticalOptions="Center"
                     TextColor="Black"/>
-            <Stepper Minimum="7"
+                <Stepper Minimum="7"
                       Maximum="12"
                       Increment="1"
+                     Margin="5"
                       HorizontalOptions="Center"
                       ValueChanged="Stepper_ValueChanged"
                      />
+            </StackLayout>
 
-                </StackLayout>
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <Image Source="bedtime.png"
+                       Margin ="15"
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="CenterAndExpand" />
+            </StackLayout>
 
-                    <StackLayout VerticalOptions="EndAndExpand">
+            <StackLayout VerticalOptions="EndAndExpand">
 
                 <Button x:Name="NextPageButton"
             Clicked="NextPageButton_Clicked"

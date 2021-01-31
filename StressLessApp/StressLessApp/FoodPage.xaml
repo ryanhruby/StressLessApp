@@ -28,7 +28,7 @@
                    FontSize="20"/>
 
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                <RadioButton x:Name="yesBreakfastButton" GroupName="first" HorizontalOptions="Center" Content ="Yes"/>
+                    <RadioButton x:Name="yesBreakfastButton" GroupName="first" HorizontalOptions="Center" Content ="Yes" IsChecked="True"/>
                 <RadioButton x:Name="noBreakfastButton" GroupName="first" HorizontalOptions="Center" Content="No"/>
             </StackLayout>
 
@@ -39,7 +39,7 @@
                 FontSize="20"/>
 
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-            <RadioButton x:Name="yesLunchButton" GroupName="second" HorizontalOptions="Center" Content="Yes"/>
+            <RadioButton x:Name="yesLunchButton" GroupName="second" HorizontalOptions="Center" Content="Yes" IsChecked="True"/>
             <RadioButton x:Name="noLunchButton" GroupName="second" HorizontalOptions="Center" Content="No"/>
             </StackLayout>
                 
@@ -50,12 +50,17 @@
                    FontSize="20"/>
 
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-            <RadioButton x:Name="yesDinnerButton" GroupName="third" HorizontalOptions="Center" Content="Yes"/>
+                    <RadioButton x:Name="yesDinnerButton" GroupName="third" HorizontalOptions="Center" Content="Yes" IsChecked="True"/>
             <RadioButton x:Name="noDinnerButton" GroupName="third" HorizontalOptions="Center" Content="No"/>
             </StackLayout>
+
             </StackLayout>
-            
-                    
+
+            <Image Source="meal.png"
+                   Margin="0"
+               VerticalOptions="End"
+               HorizontalOptions="Center" />
+
             <Button x:Name="NextPageButton"
             Clicked="NextPageButton_Clicked"
             Text="Next"
