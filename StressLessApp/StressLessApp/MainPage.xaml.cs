@@ -25,13 +25,9 @@ namespace StressLessApp
             PleaseAnswerButton.IsVisible = true;
         }
 
-        private void PleaseAnswerButton_Clicked(object sender, EventArgs e)
+        private async void PleaseAnswerButton_Clicked(object sender, EventArgs e)
         {
-            PleaseAnswerLabel.IsVisible = false;
-            PleaseAnswerButton.IsVisible = false;
-
-           // Preferences.Set("has_completed_tutorial", true);
-           // Console.WriteLine("Completed Tutorial: " + Preferences.Get("has_completed_tutorial", false));
+            await Navigation.PushAsync(new QuestionsPage());
         }
     }
 }

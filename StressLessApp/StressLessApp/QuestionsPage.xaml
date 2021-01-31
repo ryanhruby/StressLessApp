@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StressLessApp.QuestionsPage"
+             Padding="10">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to the Questions Page!"
+                VerticalOptions="Center" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="How many credit hours are you taking?"
+                   HorizontalOptions="CenterAndExpand"
+                   Padding="10"
+                   FontSize="20"/>
+            <Slider HorizontalOptions="Center"
+                    x:Name="CreditHourSlider"
+                    Maximum="25"
+                    WidthRequest="200"
+                    MaximumTrackColor="Blue"
+                    MinimumTrackColor="Blue"
+                    ThumbColor="MediumAquamarine"
+                />
+            <Label x:Name="displayLabel"
+               Text="{Binding Source={x:Reference CreditHourSlider},
+                              Path=Value,
+                              StringFormat='{0:F0} credit hour(s)'}"
+               FontSize="15"
+               HorizontalOptions="Center"
+                />
+           
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
