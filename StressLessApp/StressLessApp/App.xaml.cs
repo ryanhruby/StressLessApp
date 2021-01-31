@@ -12,6 +12,7 @@ namespace StressLessApp
         {
             InitializeComponent();
 
+            //Delete Line before release
             Preferences.Clear();
 
             OnStart();

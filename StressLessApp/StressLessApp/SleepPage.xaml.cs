@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 
 using Xamarin.Forms;
+using Xamarin.Essentials;
 
 namespace StressLessApp
 {
     public partial class SleepPage : ContentPage
     {
+
         public SleepPage()
         {
             InitializeComponent();
@@ -20,7 +22,9 @@ namespace StressLessApp
 
         private async void NextPageButton_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new HomePage());
+            Preferences.Set("ideal_num_of_sleep_hours", SleepStepper.Value);
+
+            await Navigation.PushAsync(new InterestsPage());
         }
     }
 }

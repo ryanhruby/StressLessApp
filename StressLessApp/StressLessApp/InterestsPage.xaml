@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="StressLessApp.InterestsPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to the Interests Page!"
+                VerticalOptions="Center" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label HorizontalOptions="CenterAndExpand"
+                   Padding="10"
+                   FontSize="20">
+                <Label.Text>
+                    How many interests would you like
+                    to write down?
+                </Label.Text>
+            </Label>
+            <Label x:Name="numOfInterests"
+                    Text="0"
+                    FontSize="36"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"/>
+            <Stepper Minimum="0"
+                      Maximum="5"
+                      Increment="1"
+                      HorizontalOptions="Center"
+                      ValueChanged="Stepper_ValueChanged"/>
+
+            <Label Text="Please add your interests:"
+                   FontSize="20"
+                   Padding="20"
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand"/>
+
+            <Entry x:Name="interestsEntry"
+                  Placeholder="Type an interest here"
+                  HorizontalOptions="Center"
+                  VerticalOptions="CenterAndExpand"
+                  TextChanged="InterestsEntry_TextChanged"/>
+            <Button x:Name="addInterest"
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand"
+                   Text="Add"
+                   Clicked="AddInterest_Clicked"/>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
