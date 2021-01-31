@@ -23,7 +23,7 @@ namespace StressLessApp
 
             if (!has_completed_tutorial)
             {
-                MainPage = new MainPage();
+                MainPage = new NavigationPage(new MainPage());
             }
             else
             {
