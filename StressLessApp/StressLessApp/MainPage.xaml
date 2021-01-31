@@ -2,6 +2,24 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="StressLessApp.MainPage">
+   
+    <StackLayout VerticalOptions="Center">
 
+        <Label  HorizontalTextAlignment="Center"
+            Text="Hello, &#x0a; Welcome to &#x0a; Stress Less."
+            FontSize="46"
+            TextColor="Black"
+        />
+
+        <Button 
+            x:Name="welcomeButton"
+            Text="Next"
+            Margin="60"
+            TextColor="Blue"
+            BackgroundColor="SkyBlue"
+            IsVisible="True"
+        />
+
+    </StackLayout>
 
 </ContentPage>
