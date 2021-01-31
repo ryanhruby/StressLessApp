@@ -19,9 +19,9 @@ namespace StressLessApp
           
         }
 
-        private void NextPageButton_Clicked(object sender, EventArgs e)
+        private async void NextPageButton_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new FoodPage());
         }
     }
 }
