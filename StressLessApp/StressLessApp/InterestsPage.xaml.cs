@@ -33,23 +33,28 @@ namespace StressLessApp
 
         void AddInterest_Clicked(System.Object sender, System.EventArgs e)
         {
+
+            string cpy = String.Copy(_interest);
+
             
             if (interests.Count == _numOfInterests - 1)
             {
                 DisplayAlert("Success", "You have added an interest", "Done");
-                interests.Add(_interest);
+                interests.Add(cpy);
                 _interest = string.Empty;
                 interestsEntry.Text = string.Empty;
                 interestsEntry.Placeholder = "All done!";
                 interestsEntry.IsReadOnly = true;
+  
             }
             else if (interests.Count < _numOfInterests)
             {
                 DisplayAlert("Success", "You have added an interest", "Done");
-                interests.Add(_interest);
+                interests.Add(cpy);
                 _interest = string.Empty;
                 interestsEntry.Text = string.Empty;
                 interestsEntry.Placeholder = "Type an interest here";
+
             }
         }
 
@@ -58,7 +63,7 @@ namespace StressLessApp
             Preferences.Set("num_of_interests", interests.Count);
             for (int i = 0; i < interests.Count; i++)
             {
-                Preferences.Set(String.Format($"interest_{0}", i), interests[i]);
+                Preferences.Set("interest_" + i, interests[i]);
             }
 
             await Navigation.PushAsync(new HomePage());
