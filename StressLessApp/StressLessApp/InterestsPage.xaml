@@ -1,13 +1,27 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="StressLessApp.InterestsPage">
+
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Interests"
+                   HorizontalOptions="StartAndExpand"
+                   VerticalOptions="CenterAndExpand"
+                   FontSize="25"
+                   FontAttributes="Bold"/>
+            <Image Source="icon.png"
+               VerticalOptions="CenterAndExpand"
+               Margin="3"
+               HorizontalOptions="End" />
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to the Interests Page!"
-                VerticalOptions="Center" 
-                HorizontalOptions="CenterAndExpand" />
             <Label HorizontalOptions="CenterAndExpand"
                    Padding="10"
-                   FontSize="20">
+                   FontSize="20"
+                   TextColor="Black">
                 <Label.Text>
                     How many interests would you like
                     to write down?
@@ -16,11 +30,13 @@
             <Label x:Name="numOfInterests"
                     Text="0"
                     FontSize="36"
+                   TextColor="Black"
                     HorizontalOptions="Center"
                     VerticalOptions="CenterAndExpand"/>
             <Stepper Minimum="0"
                       Maximum="5"
                       Increment="1"
+                      x:Name="stepper"
                       HorizontalOptions="Center"
                       ValueChanged="Stepper_ValueChanged"/>
 
@@ -28,7 +44,8 @@
                    FontSize="20"
                    Padding="20"
                    HorizontalOptions="Center"
-                   VerticalOptions="CenterAndExpand"/>
+                   VerticalOptions="CenterAndExpand"
+                   TextColor="Black"/>
 
             <Entry x:Name="interestsEntry"
                   Placeholder="Type an interest here"
@@ -40,6 +57,15 @@
                    VerticalOptions="CenterAndExpand"
                    Text="Add"
                    Clicked="AddInterest_Clicked"/>
+
+            <Button x:Name="NextPageButton"
+            Clicked="NextPageButton_Clicked"
+            Text="Next"
+            Margin="40"
+            VerticalOptions="EndAndExpand"
+            TextColor="Blue"
+            BackgroundColor="SkyBlue"/>
+
         </StackLayout>
 
     </ContentPage.Content>

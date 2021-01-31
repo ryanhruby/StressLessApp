@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 
 using Xamarin.Forms;
-using Xamarin.Essentials;
 
 namespace StressLessApp
 {
@@ -10,13 +9,6 @@ namespace StressLessApp
     {
         public InterestsPage()
         {
-            /*Console.WriteLine(Preferences.Get("credit_hours", 26.0));
-            Console.WriteLine(Preferences.Get("num_of_classes", 11.0));
-            Console.WriteLine(Preferences.Get("hasJob", false));
-            Console.WriteLine(Preferences.Get("eats_breakfast", true));
-            Console.WriteLine(Preferences.Get("eats_lunch", true));
-            Console.WriteLine(Preferences.Get("eats_dinner", true));
-            Console.WriteLine(Preferences.Get("ideal_num_of_sleep_hours", 0.0));*/
             InitializeComponent();
         }
 
@@ -33,18 +25,38 @@ namespace StressLessApp
 
         private void InterestsEntry_TextChanged(System.Object sender, Xamarin.Forms.TextChangedEventArgs e)
         {
+            stepper.IsEnabled = false;
             string interest = e.NewTextValue;
             _interest = interest;
         }
 
         void AddInterest_Clicked(System.Object sender, System.EventArgs e)
         {
-            if (interests.Count <= _numOfInterests)
+            if (interests.Count == _numOfInterests - 1)
             {
+                DisplayAlert("Success", "You have added an interest", "Done");
                 interests.Add(_interest);
                 _interest = string.Empty;
+                interestsEntry.Text = string.Empty;
+                interestsEntry.Placeholder = "All done!";
+                interestsEntry.IsReadOnly = true;
+            }
+            else if (interests.Count < _numOfInterests)
+            {
+                DisplayAlert("Success", "You have added an interest", "Done");
+                interests.Add(_interest);
+                _interest = string.Empty;
+                interestsEntry.Text = string.Empty;
                 interestsEntry.Placeholder = "Type an interest here";
             }
         }
+
+        private async void NextPageButton_Clicked(object sender, EventArgs e)
+        {
+
+            await Navigation.PushAsync(new HomePage());
+        }
+
+
     }
 }
