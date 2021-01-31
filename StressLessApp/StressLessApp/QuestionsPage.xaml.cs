@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xamarin.Essentials;
 
 namespace StressLessApp
 {
@@ -21,6 +22,10 @@ namespace StressLessApp
 
         private async void NextPageButton_Clicked(object sender, EventArgs e)
         {
+            Preferences.Set("credit_hours", CreditHourSlider.Value);
+            Preferences.Set("num_of_classes", ClassesSlider.Value);
+            Preferences.Set("hasJob", YesButton.IsChecked);
+
             await Navigation.PushAsync(new FoodPage());
         }
     }

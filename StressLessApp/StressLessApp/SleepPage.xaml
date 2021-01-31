@@ -31,7 +31,9 @@
                     HorizontalOptions="Center"
                     VerticalOptions="Center"
                     TextColor="Black"/>
-                <Stepper Minimum="7"
+                <Stepper 
+                    x:Name="SleepStepper"
+                    Minimum="7"
                       Maximum="12"
                       Increment="1"
                      Margin="5"
