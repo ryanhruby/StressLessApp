@@ -2,7 +2,13 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="StressLessApp.MainPage">
-   
+
+    <NavigationPage.TitleView>
+        <Image Source="icon.png"
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="CenterAndExpand" />
+    </NavigationPage.TitleView>
+    
     <StackLayout VerticalOptions="Center">
 
         <Label  
@@ -25,7 +31,7 @@
         <Label  
             x:Name="PleaseAnswerLabel"
             HorizontalTextAlignment="Center"
-            Text="Please answer a&#x0a;few questions so we can&#x0a;determine your availability."
+            Text="Please answer a&#x0a;few questions so we can&#x0a;determine your stress level."
             FontSize="30"
             TextColor="Black"
             IsVisible="False"

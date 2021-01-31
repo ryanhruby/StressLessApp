@@ -3,11 +3,24 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="StressLessApp.QuestionsPage"
              Padding="10">
+
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Questions"
+                   HorizontalOptions="StartAndExpand"
+                   VerticalOptions="CenterAndExpand"
+                   FontSize="25"
+                   FontAttributes="Bold"/>
+            <Image Source="icon.png"
+               VerticalOptions="CenterAndExpand"
+               Margin="3"
+               HorizontalOptions="End" />
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to the Questions Page!"
-                VerticalOptions="Center" 
-                HorizontalOptions="CenterAndExpand" />
             <Label Text="How many credit hours are you taking?"
                    HorizontalOptions="CenterAndExpand"
                    Padding="10"
