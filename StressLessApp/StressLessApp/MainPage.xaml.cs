@@ -14,5 +14,21 @@ namespace StressLessApp
         {
             InitializeComponent();
         }
+
+        private void WelcomeButton_Clicked(object sender, EventArgs e)
+        {
+            WelcomeLabel.IsVisible = false;
+            WelcomeButton.IsVisible = false;
+
+            PleaseAnswerLabel.IsVisible = true;
+            PleaseAnswerButton.IsVisible = true;
+        }
+
+        private void PleaseAnswerButton_Clicked(object sender, EventArgs e)
+        {
+            PleaseAnswerLabel.IsVisible = false;
+            PleaseAnswerButton.IsVisible = false;
+            
+        }
     }
 }

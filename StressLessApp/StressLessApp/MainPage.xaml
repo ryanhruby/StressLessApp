@@ -5,19 +5,40 @@
    
     <StackLayout VerticalOptions="Center">
 
-        <Label  HorizontalTextAlignment="Center"
+        <Label  
+            x:Name="WelcomeLabel"
+            HorizontalTextAlignment="Center"
             Text="Hello, &#x0a; Welcome to &#x0a; Stress Less."
             FontSize="46"
             TextColor="Black"
         />
 
         <Button 
-            x:Name="welcomeButton"
+            x:Name="WelcomeButton"
+            Clicked="WelcomeButton_Clicked"
             Text="Next"
             Margin="60"
             TextColor="Blue"
             BackgroundColor="SkyBlue"
-            IsVisible="True"
+        />
+
+        <Label  
+            x:Name="PleaseAnswerLabel"
+            HorizontalTextAlignment="Center"
+            Text="Please answer a&#x0a;few questions so we can&#x0a;determine your availability."
+            FontSize="30"
+            TextColor="Black"
+            IsVisible="False"
+        />
+
+        <Button 
+            x:Name="PleaseAnswerButton"
+            Clicked="PleaseAnswerButton_Clicked"
+            Text="Sounds good!"
+            Margin="60"
+            TextColor="Blue"
+            BackgroundColor="SkyBlue"
+            IsVisible="False"
         />
 
     </StackLayout>
