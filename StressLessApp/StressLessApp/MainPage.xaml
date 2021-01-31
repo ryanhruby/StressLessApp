@@ -3,4 +3,50 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="StressLessApp.MainPage">
 
+    <NavigationPage.TitleView>
+        <Image Source="icon.png"
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="CenterAndExpand" />
+    </NavigationPage.TitleView>
+    
+    <StackLayout VerticalOptions="Center">
+
+        <Label  
+            x:Name="WelcomeLabel"
+            HorizontalTextAlignment="Center"
+            Text="Hello, &#x0a; Welcome to &#x0a; Stress Less."
+            FontSize="46"
+            TextColor="Black"
+        />
+
+        <Button 
+            x:Name="WelcomeButton"
+            Clicked="WelcomeButton_Clicked"
+            Text="Next"
+            Margin="60"
+            TextColor="Blue"
+            BackgroundColor="SkyBlue"
+        />
+
+        <Label  
+            x:Name="PleaseAnswerLabel"
+            HorizontalTextAlignment="Center"
+            Text="Please answer a&#x0a;few questions so we can&#x0a;determine your stress level."
+            FontSize="30"
+            TextColor="Black"
+            IsVisible="False"
+        />
+
+        <Button 
+            x:Name="PleaseAnswerButton"
+            Clicked="PleaseAnswerButton_Clicked"
+            Text="Sounds good!"
+            Margin="60"
+            TextColor="Blue"
+            BackgroundColor="SkyBlue"
+            IsVisible="False"
+        />
+
+    </StackLayout>
+
 </ContentPage>

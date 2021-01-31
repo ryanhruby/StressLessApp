@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StressLessApp.QuestionsPage"
+             Padding="10">
+
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Questions"
+                   HorizontalOptions="StartAndExpand"
+                   VerticalOptions="CenterAndExpand"
+                   FontSize="25"
+                   FontAttributes="Bold"/>
+            <Image Source="icon.png"
+               VerticalOptions="CenterAndExpand"
+               Margin="3"
+               HorizontalOptions="End" />
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="How many credit hours are you taking?"
+                   HorizontalOptions="CenterAndExpand"
+                   Padding="15"
+                   FontSize="20"
+                   TextColor="Black"/>
+            <Slider HorizontalOptions="Center"
+                    x:Name="CreditHourSlider"
+                    Maximum="25"
+                    WidthRequest="300"
+                    MaximumTrackColor="Blue"
+                    MinimumTrackColor="Blue"
+                    ThumbColor="MediumAquamarine"
+                />
+            <Label Text="{Binding Source={x:Reference CreditHourSlider},
+                              Path=Value,
+                              StringFormat='{0:F0} credit hour(s)'}"
+               FontSize="15"
+               HorizontalOptions="Center"
+                   TextColor="Black"
+                />
+            <Label Text="How many classes are you in?"
+                   HorizontalOptions="CenterAndExpand"
+                   Padding="15"
+                   FontSize="20"
+                   TextColor="Black"/>
+            <Slider HorizontalOptions="Center"
+                    x:Name="ClassesSlider"
+                    Maximum="10"
+                    WidthRequest="300"
+                    MaximumTrackColor="Blue"
+                    MinimumTrackColor="Blue"
+                    ThumbColor="MediumAquamarine"
+                />
+            <Label Text="{Binding Source={x:Reference ClassesSlider},
+                              Path=Value,
+                              StringFormat='{0:F0} class(es)'}"
+               FontSize="15"
+               HorizontalOptions="Center"
+                   TextColor="Black"
+                />
+            <Label Text="Do you have a job?" 
+                   FontSize="20"
+                   Padding="20"
+                   HorizontalOptions="Center"
+                   TextColor="Black"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <RadioButton x:Name="YesButton"
+                    HorizontalOptions="Center"
+                    
+                />
+                <Label Text="Yes"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    FontSize="15"
+                    TextColor="Black"
+                />
+                <RadioButton
+                    HorizontalOptions="Center"
+                    IsChecked="True"
+                    />
+                <Label Text="No" 
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    FontSize="15"
+                    TextColor="Black"
+                       />
+            </StackLayout>
+
+            
+
+            <Button x:Name="NextPageButton"
+            Clicked="NextPageButton_Clicked"
+            Text="Next"
+            Margin="40"
+            VerticalOptions="EndAndExpand"
+            TextColor="Blue"
+            BackgroundColor="SkyBlue"/>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

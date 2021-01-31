@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StressLessApp.HomePage">
+    <StackLayout>
+        <Label Text="Welcome to the Home Page!"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+               FontSize="30"
+        />
+
+        <Button Text="Your Personalized Calendar To Reduce Stress"
+                HorizontalOptions="CenterAndExpand"
+                Padding="10"
+                Margin="20"
+                Clicked="Button_Clicked"/>
+
+            <Label Text="Study Timer:"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   FontSize="25"/>
+            <Label x:Name="Timer"
+                   Text="00:00:00"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   FontSize="25"/>
+
+         <StackLayout  Orientation="Horizontal">
+            <Button Text="Start Studying!"
+                    Clicked="Start_Timer"/>
+            <Button Text="Pause Studying"
+                    Clicked="Pause_Timer"/>
+            <Button Text="Stop Studying"
+                    Clicked="End_Timer"/>
+         </StackLayout>
+       
+    </StackLayout>
+</ContentPage>

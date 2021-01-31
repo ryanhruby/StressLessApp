@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StressLessApp.SecondPage">
+    <ScrollView>
+    <StackLayout>
+        <Button Text="Back to Home"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                
+                Padding="10"
+                Margin="20"
+                Clicked="Button_Clicked"/>
+
+       <Grid Margin="20,35,20,20" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*" />
+                <ColumnDefinition Width="0.5*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="100" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="100" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="100" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="100" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="100" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="100" />
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="1" FontAttributes="Bold">
+                <Label.Text>
+                    Monday 
+                </Label.Text>
+            </Label>
+            <Label x:Name="MondayText"
+                   Grid.Row="2"
+                   Text="TODO:"/>
+            <Label Grid.Row="3" FontAttributes="Bold">
+                <Label.Text>
+                    Tuesday 
+                </Label.Text>
+            </Label>
+            <Label x:Name="TuesdayText"
+                   Grid.Row="4"
+                   Text="TODO:"/>
+            <Label Grid.Row="5" FontAttributes="Bold">
+                <Label.Text>
+                    Wednesday 
+                </Label.Text>
+            </Label>
+            <Label x:Name="WednesdayText"
+                   Grid.Row="6"
+                   Text="TODO:"/>
+            <Label Grid.Row="7" FontAttributes="Bold">
+                <Label.Text>
+                    Thursday 
+                </Label.Text>
+            </Label>
+            <Label x:Name="ThursdayText"
+                   Grid.Row="8"
+                   Text="TODO:"/>
+            <Label Grid.Row="9" FontAttributes="Bold">
+                <Label.Text>
+                    Friday 
+                </Label.Text>
+            </Label>
+            <Label x:Name="FridayText"
+                   Grid.Row="10"
+                   Text="TODO:"/>
+             <Label Grid.Row="11" FontAttributes="Bold">
+                <Label.Text>
+                    Saturday 
+                </Label.Text>
+            </Label>
+            <Label x:Name="SaturdayText"
+                   Grid.Row="12"
+                   Text="TODO:"/>
+             <Label Grid.Row="13" FontAttributes="Bold">
+                <Label.Text>
+                    Sunday 
+                </Label.Text>
+            </Label>
+            <Label x:Name="SundayText"
+                   Grid.Row="14"
+                   Text="TODO:"/>
+        </Grid>
+
+    </StackLayout>
+    </ScrollView>
+</ContentPage>
+
