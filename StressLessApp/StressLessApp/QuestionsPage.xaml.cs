@@ -16,7 +16,12 @@ namespace StressLessApp
         {
             NavigationPage.SetHasBackButton(this, false);
             InitializeComponent();
-           
+          
+        }
+
+        private void NextPageButton_Clicked(object sender, EventArgs e)
+        {
+
         }
     }
 }
