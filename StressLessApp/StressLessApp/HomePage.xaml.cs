@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xamarin.Essentials;
 
 namespace StressLessApp
 {
@@ -14,6 +15,13 @@ namespace StressLessApp
     {
         public HomePage()
         {
+            Console.WriteLine(Preferences.Get("num_of_interests", -1));
+            for (int i = 0; i < Preferences.Get("num_of_interests", -1); i++)
+            {
+                Console.WriteLine(Preferences.Get(String.Format($"interest_{0}", i), "No interest"));
+            }
+
+
             InitializeComponent();
         }
     }
