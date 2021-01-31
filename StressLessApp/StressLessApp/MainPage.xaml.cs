@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Xamarin.Essentials;
 
 namespace StressLessApp
 {
@@ -28,7 +29,9 @@ namespace StressLessApp
         {
             PleaseAnswerLabel.IsVisible = false;
             PleaseAnswerButton.IsVisible = false;
-            
+
+           // Preferences.Set("has_completed_tutorial", true);
+           // Console.WriteLine("Completed Tutorial: " + Preferences.Get("has_completed_tutorial", false));
         }
     }
 }
